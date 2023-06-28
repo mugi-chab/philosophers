@@ -6,7 +6,7 @@
 /*   By: svillalv <svillalv@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 19:36:41 by svillalv          #+#    #+#             */
-/*   Updated: 2023/06/28 20:07:38 by svillalv         ###   ########.fr       */
+/*   Updated: 2023/06/28 20:17:46 by svillalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int ft_atoi(const char *str)
 	return (res * sign);
 }
 
-int	check_args(int ac, char **av)
+int	ft_check_args(int ac, char **av)
 {
 	int i;
 	int j;
