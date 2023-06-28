@@ -6,7 +6,7 @@
 /*   By: svillalv <svillalv@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 19:36:41 by svillalv          #+#    #+#             */
-/*   Updated: 2023/06/28 20:17:46 by svillalv         ###   ########.fr       */
+/*   Updated: 2023/06/28 20:48:39 by svillalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ int	ft_check_args(int ac, char **av)
 		return (1);
 	while (i < ac)
 	{
-		printf("av[%d] = %s\n", i, av[i]);
 		if (av[i][0] == '\0')
 			return (1);
 		if (ft_atoi(av[i]) < 0)
