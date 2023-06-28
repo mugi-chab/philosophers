@@ -6,13 +6,13 @@
 #    By: svillalv <svillalv@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/14 23:28:52 by svillalv          #+#    #+#              #
-#    Updated: 2023/06/25 20:29:46 by svillalv         ###   ########.fr        #
+#    Updated: 2023/06/28 19:38:56 by svillalv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	philo
 CC		=	gcc -pthread -fsanitize=thread -g
-SRC		=	src/main.c
+SRC		=	src/main.c src/check_args.c
 CFLAGS	=	-Wall -Wextra -Werror
 RM		=	rm -f
 OBJS	=	$(SRC:.c=.o)
