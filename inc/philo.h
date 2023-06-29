@@ -6,7 +6,7 @@
 /*   By: svillalv <svillalv@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 23:46:24 by svillalv          #+#    #+#             */
-/*   Updated: 2023/06/28 20:17:40 by svillalv         ###   ########.fr       */
+/*   Updated: 2023/06/29 17:44:30 by svillalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <pthread.h>
 #include <stdio.h>
 #include <string.h>
+#include <sys/time.h>
 # define NC	"\e[0m"
 # define YELLOW	"\e[1;33m"
 # define BYELLOW	"\e[1;33m"
