@@ -6,7 +6,7 @@
 /*   By: svillalv <svillalv@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 23:46:24 by svillalv          #+#    #+#             */
-/*   Updated: 2023/06/29 17:44:30 by svillalv         ###   ########.fr       */
+/*   Updated: 2023/06/29 18:11:17 by svillalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,8 @@ typedef	struct s_counter
 } t_counter;
 
 // args
-int	ft_check_args(int ac, char **av);
+int	ft_check_args(int ac, char **av, t_philo_args *args);
 int ft_atoi(const char *str);
+void	ft_fill_struct(int ac, char *av, t_philo_args *args);
 
 #endif

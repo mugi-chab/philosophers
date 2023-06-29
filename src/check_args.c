@@ -6,7 +6,7 @@
 /*   By: svillalv <svillalv@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 19:36:41 by svillalv          #+#    #+#             */
-/*   Updated: 2023/06/28 20:48:39 by svillalv         ###   ########.fr       */
+/*   Updated: 2023/06/29 18:24:10 by svillalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,13 @@ int ft_atoi(const char *str)
 	return (res * sign);
 }
 
-int	ft_check_args(int ac, char **av)
+int	ft_check_args(int ac, char **av, t_philo_args *args)
 {
 	int i;
 	int j;
 
 	i = 1;
-	if (ac < 6 || ac > 7)
+	if (ac < 5 || ac > 6)
 		return (1);
 	while (i < ac)
 	{
@@ -57,7 +57,23 @@ int	ft_check_args(int ac, char **av)
 			if (av[i][j] < '0' || av[i][j] > '9')
 				return (1);
 		}
+		ft_fill_struct(i, av[i], args);
 		i++;
 	}
 	return (0);
+}
+
+void	ft_fill_struct(int ac, char *av, t_philo_args *args)
+{
+	if (ac == 1)
+		args->num_of_philos = ft_atoi(av);
+	else if (ac == 2)
+		args->time_to_die = ft_atoi(av);
+	else if (ac == 3)
+		args->time_to_eat = ft_atoi(av);
+	else if (ac == 4)
+		args->time_to_sleep = ft_atoi(av);
+	args->num_of_eats = -1;
+	if (ac == 5)
+		args->num_of_eats = ft_atoi(av);
 }
