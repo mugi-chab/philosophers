@@ -6,7 +6,7 @@
 /*   By: svillalv <svillalv@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 23:46:24 by svillalv          #+#    #+#             */
-/*   Updated: 2023/06/29 18:11:17 by svillalv         ###   ########.fr       */
+/*   Updated: 2023/06/30 12:28:17 by svillalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,21 @@
 
 typedef struct s_philo
 {
-	int				id;
-	int				state;
-	int				left_fork;
-	int				right_fork;
-	int				eat_count;
-	pthread_mutex_t	*forks;
-	pthread_mutex_t	*print_mutex;
-	pthread_mutex_t	*eat_mutex;
+	int				id_philo;
+	size_t			last_meal;
+	pthread_t		*id_thread;
+	pthread_mutex_t	forks;
+	pthread_mutex_t	print_mutex;
+	t_philo_args	*args;
+	t_philo			*next;
 } t_philo;
 
 typedef struct	s_philo_args
 {
+	int				status;
+	pthread_mutex_t death_mutex;
+	size_t			start_time;
+	int				eat_count;
 	int				time_to_die;
 	int				time_to_eat;
 	int				time_to_sleep;
@@ -50,9 +53,9 @@ typedef	struct s_counter
 	unsigned int	count;
 } t_counter;
 
-// args
-int	ft_check_args(int ac, char **av, t_philo_args *args);
-int ft_atoi(const char *str);
+// check args
+int		ft_check_args(int ac, char **av, t_philo_args *args);
+int 	ft_atoi(const char *str);
 void	ft_fill_struct(int ac, char *av, t_philo_args *args);
 
 #endif
