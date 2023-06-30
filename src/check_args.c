@@ -6,7 +6,7 @@
 /*   By: svillalv <svillalv@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 19:36:41 by svillalv          #+#    #+#             */
-/*   Updated: 2023/06/29 18:24:10 by svillalv         ###   ########.fr       */
+/*   Updated: 2023/06/30 12:30:12 by svillalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,4 +76,7 @@ void	ft_fill_struct(int ac, char *av, t_philo_args *args)
 	args->num_of_eats = -1;
 	if (ac == 5)
 		args->num_of_eats = ft_atoi(av);
+
+	// inicializar el tiempo
+	// status = 1
 }
